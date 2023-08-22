@@ -1,0 +1,448 @@
+@font-face {
+    font-family: 'arial-rounded';
+    src: url('./my_fonts/unicode.arialr.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(212, 212, 212);
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: rgb(171, 85, 241);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    height: 10vh;
+    background: rgb(134, 107, 136);
+    margin-left: 5%;
+}
+
+nav .logo img {
+    height: 100%;
+}
+
+/*nav .nav-items {
+    margin-right: ;
+    height: 100%;
+    width: 30%;
+    background:rgb(73, 56, 114);
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}*/
+
+nav .nav-items .nav_list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav .nav-items  .nav_list .nav_list_item {
+    color: whitesmoke;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+nav .nav-items  .nav_list .nav_list_item a {
+    color: whitesmoke;
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+}
+nav .nav-items  .nav_list .nav_list_item a:hover {
+    background: rgb(77, 7, 116);
+    transition: all 0.35s ease;
+    border: pink 3px solid;
+    border-radius: 5px;
+    color: pink;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: .75rem;
+    right: 3rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.mobile-menu .bar {
+    height: 3px;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.home, .nails, .hair, .make_up, .contact, .promotions{ 
+    width: 100vw; 
+    height: auto;
+}
+
+.contact {
+    background: rgb(219, 186, 221);
+}
+
+.legend {
+    height: 60vh;
+    background-image: url('./images/pexels-bruno-thethe-1958738.jpg');
+    background-position: center center;
+    background-size:cover;
+    width: 100vw;
+}
+
+.overlay {
+    height: inherit;
+    width: inherit;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    display: grid;
+    place-items: center;
+}
+
+.overlay .center_box img {
+    width: 100%;
+}
+
+.center_box img:hover {
+    animation-duration: 2s;
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(100%);
+        transition: 1s ease all;
+    }
+
+    50% {
+        transform: scale(120%);
+        transition: 1s ease all;
+    }
+
+    100% {
+        transform: scale(100%);
+        transition: 1s ease all;
+    }
+}
+
+.center_box {
+    height: 60%;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.6);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.75);
+    display: grid;
+    place-items: center;
+}
+
+.introduction {
+    height: auto;
+    width: 100vw;
+}
+
+.introduction .welcome_tag {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    place-items: center center;
+    color:rgb(77, 7, 116);
+    font-size: 2rem;
+    font-family: 'arial-rounded';
+}
+
+.introduction p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(77, 7, 116)
+}
+
+.introduction p a {
+    text-decoration: none;
+    color: rgb(171, 85, 241);
+}
+
+.introduction p a:hover {
+    font-size: larger;
+    transition: .4s ease-in-out all;
+}
+
+.legend_hair {
+    height: 100vh;
+    background-image: url('/hair/IMG_20220709_221435_318.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.legend_hair .hair_overlay {
+    height: inherit;
+    width: inherit;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.list {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: 5%;
+    font-family: 'Arial-rounded';
+    list-style: none;
+}
+
+.list li h2 {
+    color: rgb(64, 10, 114)
+}
+
+.list li {
+    color: rgb(145, 79, 224);
+    text-indent: 50px;
+    
+}
+
+.list li .sublist {
+    text-indent: 50px;
+    color:rgb(77, 7, 116);
+    list-style: none;
+}
+ 
+.nails_tag {
+    color:rgb(216, 138, 151);
+    background:rgba(0, 0, 0, 0.4);
+    width: 50%;
+    height: 40%;
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    padding: 2%;
+    font-family: 'Arial-rounded';
+    cursor: pointer;
+}
+
+.nails_tag:hover {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.contact .introduction p {
+    display: flex;
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto; 
+    color:rgb(25, 1, 48)
+}
+
+.email_form {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+
+.email_form input {
+    height: 5vh;
+    margin-top: 2vh;
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+.email_form .email_text {
+    height: 20vh;
+}
+
+.submit {
+    border: none;
+    border-radius: 20px;
+    height: 5vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    background: rgb(171, 85, 241);
+    color: whitesmoke;
+    width: 50%;
+    cursor: pointer
+}
+
+.submit:hover {
+    height: 7vh;
+    width: 60%;
+    font-size: large;
+    transition: 0.6s ease all;
+    border-radius: 30px;
+    border: 5px rgb(216, 138, 151) solid;
+}
+
+main {
+    width: 100vw;
+    height: auto;
+    position: relative;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image {
+    max-width: 300px;
+    height: 400px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 2%;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.image img {
+    width: 300px;
+    height: inherit;
+    aspect-ratio:initial;
+    border-radius: 20px;
+}
+
+.whatsapp {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 15vh;
+    box-shadow:5px 5px 5px 5px rgba(0, 0, 0, 0.6);
+    z-index: 900;
+    margin-left:90%;
+    border-radius: 50%;
+    background: rgb(171, 85, 241);
+}
+
+.whatsapp a {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.whatsapp a img {
+    width: inherit;
+    height: inherit;
+}
+
+.whatsapp:hover {
+    width: 65px;
+    height: 65px;
+    box-shadow: 5px 5px 5px 5px rgb(25, 1, 48);
+    transition: .4s ease-in;
+}
+
+footer {
+    height: 10vh;
+    background:rgb(73, 56, 114);
+    width: 100vw;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+footer .icons {
+    height: 100%;
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    margin-right: 5%;
+}
+
+footer .icons a {
+    margin-right: 5%;
+}
+
+footer .icons img {
+    height: 50%;
+    display: grid;
+    place-items: center;
+    margin-top: 50%;
+}
+
+footer .copyright {
+    height: 100%;
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+.legend_nails {
+    height: 80vh;
+    background-image: url('./nails/IMG-20220527-WA0012\ -\ Copy.jpg');
+    background-position: center center;
+    background-size:cover;
+    width: 100vw;
+}
+
+@media(max-width: 900px) {
+    .nav-items{
+        display: none;
+        width: 100%;
+        background:rgb(73, 56, 114)
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    nav .nav-items .nav_list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-items .nav_list_item a{
+        padding: .5rem 1rem;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+}
+
+@media(max-width: 650px)
+{
+    .email_form {
+        width: 80vw;
+    }
+
+    .image {
+        margin-top: 5%;
+    }
+}
